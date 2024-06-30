@@ -1,0 +1,44 @@
+{
+    "words": [
+        {
+            "category": "Movies",
+            "word": "Inception"
+        },
+        {
+            "category": "Movies",
+            "word": "Titanic"
+        },
+        {
+            "category": "Programming",
+            "word": "JavaScript"
+        },
+        {
+            "category": "Programming",
+            "word": "Python"
+        },
+        {
+            "category": "Books",
+            "word": "HarryPotter"
+        },
+        {
+            "category": "Books",
+            "word": "LordOfTheRings"
+        },
+        {
+            "category": "Food",
+            "word": "Pizza"
+        },
+        {
+            "category": "Food",
+            "word": "Sushi"
+        },
+        {
+            "category": "Countries",
+            "word": "Australia"
+        },
+        {
+            "category": "Countries",
+            "word": "Canada"
+        }
+    ]
+}

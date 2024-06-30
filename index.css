@@ -1,0 +1,202 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    background-color: azure;
+    margin:20px;
+}
+
+.game{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: azure;
+    margin:20px;
+    height: 400px;
+    
+}
+
+.letters{
+    margin: 0px 100px 0px 0px;
+    padding: 15px;
+}
+
+#btn{
+    padding: 10px;
+    margin: 5px;
+    background-color:blue;
+    color: aliceblue;
+    border: none;
+    font-size: 25px;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+#btn:hover{
+    background-color:blueviolet ;
+    transition:ease-in;
+}
+
+.word{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    background-color: azure;
+    margin:20px;
+    gap:10px ;
+    padding:10px;
+}
+
+p{
+    border-bottom: solid gray 3px ;
+    width: 80px;
+    font-size: 50px;
+    padding-left: 30px;
+    color: azure;
+}
+
+.greenBtn,
+.greenBtn:hover{
+    background-color: green;
+    color:white;
+}
+.redBtn, 
+.redBtn:hover{
+    background-color: red;
+    color: white;
+}
+
+.line-1{
+    height: 5px;
+    width:20%;
+    left:100px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 10%;
+}
+
+.line-2 {
+    width: 5px;
+    height: 60%;
+    left: 200px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 10%;
+}
+.line-3 {
+    height: 5px;
+    width: 20%;
+    left: 200px;
+    background-color: rgb(0, 0,  0);
+    position: absolute;
+    top: 35%;
+}
+.line-4 {
+    width: 5px;
+    height: 8%;
+    left: 320px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 35%;
+}
+.line-5 {
+    width: 70px;
+    height: 70px;
+    left: 282px;
+    border-radius:50%;
+    border: 5px dashed black;
+    position: absolute;
+    top: 235px;
+}
+.line-6 {
+    width: 50px;
+    height: 50px;
+    left: 292px;
+    border-radius: 50%;
+    border: 5px solid black;
+    position: absolute;
+    top: 44%;
+}
+.line-7 {
+    width: 4px;
+    height: 100px;
+    left: 320px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 54%;
+    
+}
+
+.line-8 {
+    width: 4px;
+    height: 15%;
+    left: 287px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 53%;
+    transform:rotate(125deg) ;
+}
+
+.line-9 {
+    width: 4px;
+    height: 15%;
+    left: 353px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 53%;
+    transform: rotate(-125deg);
+}
+
+.line-10 {
+    width: 4px;
+    height: 15%;
+    left: 289px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 382px;
+    transform: rotate(50deg);
+}
+
+.line-11 {
+    width: 4px;
+    height: 15%;
+    left: 350px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 382px;
+    transform: rotate(-50deg);
+}   
+.result{
+        width: 300px;
+        height: fit-content;
+        left: 40%;
+        padding: 30px;
+        border-radius: 15px;
+        color:aliceblue;
+        background-color: rgb(197, 28, 206);
+        position: absolute;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+        font-size: 30px;
+}
+
+
+.retryBtn{
+    padding: 5px 10px;
+    background-color: aliceblue;
+    border: none;
+    font-size: 20px;
+    width: fit-content;
+}
+.hide {
+    display: none;
+}

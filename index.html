@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="index.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Hangman game</h2>
+      <span>word from: <span id="category"></span></span>
+    </div>
+
+    <div class="game">
+      <div class="man">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+        <div class="line-4"></div>
+        <div class="line-5"></div>
+        <div class="line-6"></div>
+        <div class="line-7"></div>
+        <div class="line-8"></div>
+        <div class="line-9"></div>
+        <div class="line-10"></div>
+        <div class="line-11"></div>
+        <div class="result">
+          <div class="resultText"></div>
+          <button onclick="location.reload();" class="retryBtn">Retry</button>
+        </div>
+      </div>
+
+      <div  id="letters" class="letters">
+        <button id="btn">A</button>
+        <button id="btn">B</button>
+        <button id="btn">C</button>
+        <button id="btn">D</button>
+        <button id="btn">E</button>
+        <button id="btn">F</button>
+        <button id="btn">G</button>
+        <button id="btn">H</button>
+        <button id="btn">I</button>
+        <button id="btn">J</button>
+        <button id="btn">K</button>
+        <button id="btn">L</button>
+        <button id="btn">M</button>
+        <button id="btn">N</button>
+        <button id="btn">O</button>
+        <button id="btn">P</button>
+        <button id="btn">Q</button>
+        <button id="btn">R</button>
+        <button id="btn">S</button>
+        <button id="btn">T</button>
+        <button id="btn">U</button>
+        <button id="btn">V</button>
+        <button id="btn">W</button>
+        <button id="btn">X</button>
+        <button id="btn">Y</button>
+        <button id="btn">Z</button>
+      </div>
+    </div>
+    <div class="word" id="word">
+    
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
