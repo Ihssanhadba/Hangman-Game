@@ -1,39 +1,43 @@
 let wordToGuess;
-fetch('data.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-        }
-        return response.json();
-    })
-    .then(data => {
-        const words = data.words;
-        const randomIndex = getRandomInt(words.length - 1);
-        const randomWordObject = words[randomIndex];
+fetchData();
+hideHang()
+function fetchData() {
+    fetch('data.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            const words = data.words;
+            const randomIndex = getRandomInt(words.length - 1);
+            const randomWordObject = words[randomIndex];
 
-        const category = document.getElementById('category');
-        category.textContent = randomWordObject.category;
-        const gameDiv = document.getElementById('word');
-        wordToGuess = randomWordObject.word;
-        //convert wordToGuess from string to array,
-        Array.from(wordToGuess).forEach(element => {
-            let wordElement = document.createElement('p');
-            wordElement.textContent = element;
-            gameDiv.appendChild(wordElement);
+            const category = document.getElementById('category');
+            category.textContent = randomWordObject.category;
+            const gameDiv = document.getElementById('word');
+            wordToGuess = randomWordObject.word;
+            //convert wordToGuess from string to array,
+            Array.from(wordToGuess).forEach(element => {
+                let wordElement = document.createElement('p');
+                wordElement.textContent = element;
+                gameDiv.appendChild(wordElement);
+            });
+            // for (let i = 0; i < wordToGuess.length; i++) {
+            //     let wordElement = document.createElement('p');
+            //     wordElement.textContent = wordToGuess[i];
+            //     gameDiv.appendChild(wordElement);
+            // }
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
         });
-        // for (let i = 0; i < wordToGuess.length; i++) {
-        //     let wordElement = document.createElement('p');
-        //     wordElement.textContent = wordToGuess[i];
-        //     gameDiv.appendChild(wordElement);
-        // }
-    })
-    .catch(error => {
-        console.error('There has been a problem with your fetch operation:', error);
-    });
+}
 function getRandomInt(max) {
     return Math.floor(Math.random() * (max - 0 + 1)) + 0;
 }
-
+let word = document.getElementsByTagName("p");
 const buttons = document.querySelectorAll(".btn");
 let Chance = 0, score = 0;
 
@@ -41,7 +45,7 @@ Array.from(buttons).forEach(button => {
     button.addEventListener("click", (e) => {
         let correct = false;
         const letterClicked = e.target.textContent;
-        let word = document.getElementsByTagName("p");
+        //  let word = document.getElementsByTagName("p");
         for (let i = 0; i < word.length; i++) {
             let letter = word[i];
             if (letter.textContent == letterClicked.toLowerCase()) {
@@ -81,7 +85,9 @@ function Winner() {
     const resText = document.querySelector(".resultText");
     resText.textContent = ` Congrats!! but you have made ${Chance} mistakes :`;
     elementToShow.classList.remove("hide");
-    buttons.classList.add("hide");
+    Array.from(buttons).forEach(button => {
+        button.classList.add("hide");
+    });
 }
 
 function loser() {
@@ -89,15 +95,35 @@ function loser() {
     const resText = document.querySelector(".resultText");
     resText.textContent = ` Oops! you have lost :( the word is: ${wordToGuess}`;
     elementToShow.classList.remove("hide");
-    buttons.classList.add("hide");
+    Array.from(buttons).forEach(button => {
+        button.classList.add("hide");
+    });
 }
+function retryGame() {
+    Chance = 0, score = 0;
+    fetchData();
+    hideHang();
+    Array.from(word).forEach(element => {
+        element.parentNode.removeChild(element);;
 
-const hangstandChildren = document.querySelector(".man").children;
+    });
+    Array.from(buttons).forEach(button => {
+        button.classList.remove("hide");
+        button.style.background = "blue";
+        button.removeAttribute('disabled');
+        // button.attributes= enable;
+    })
+    elementToShow.classList.add("hide");
+    buttons.classList.remove("hide");
+    buttons.style.background = "blue";
+}
+function hideHang() {
+    const hangstandChildren = document.querySelector(".man").children;
 
-Array.from(hangstandChildren).forEach(element => {
-    element.classList.add("hide");
-});
-
+    Array.from(hangstandChildren).forEach(element => {
+        element.classList.add("hide");
+    });
+}
 // for (let i = 0; i < hangstandChildren.length;i++){
 //     const child = hangstandChildren[i];
 //     child.classList.add("hide");
