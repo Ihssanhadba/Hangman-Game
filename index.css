@@ -1,34 +1,35 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
 }
-.header{
+
+.header {
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     background-color: azure;
-    margin:20px;
+    margin: 20px;
 }
 
-.game{
+.game {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: azure;
-    margin:20px;
+    margin: 20px;
     height: 400px;
-    
+
 }
 
-.letters{
+.letters {
     margin: 0px 100px 0px 0px;
     padding: 15px;
 }
 
-#btn{
+.btn {
     padding: 10px;
     margin: 5px;
-    background-color:blue;
+    background-color: blue;
     color: aliceblue;
     border: none;
     font-size: 25px;
@@ -36,24 +37,24 @@
     min-width: 50px;
 }
 
-#btn:hover{
-    background-color:blueviolet ;
-    transition:ease-in;
+#btn:hover {
+    background-color: blueviolet;
+    transition: ease-in;
 }
 
-.word{
+.word {
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     background-color: azure;
-    margin:20px;
-    gap:10px ;
-    padding:10px;
+    margin: 20px;
+    gap: 10px;
+    padding: 10px;
 }
 
-p{
-    border-bottom: solid gray 3px ;
+p {
+    border-bottom: solid gray 3px;
     width: 80px;
     font-size: 50px;
     padding-left: 30px;
@@ -61,58 +62,63 @@ p{
 }
 
 .greenBtn,
-.greenBtn:hover{
+.greenBtn:hover {
     background-color: green;
-    color:white;
+    color: white;
 }
-.redBtn, 
-.redBtn:hover{
+
+.redBtn,
+.redBtn:hover {
     background-color: red;
     color: white;
 }
 
-.line-1{
+.line-1 {
     height: 5px;
-    width:20%;
-    left:100px;
+    width: 200px;
+    left: 100px;
     background-color: rgb(0, 0, 0);
     position: absolute;
-    bottom: 10%;
+    bottom: 70px;
 }
 
 .line-2 {
     width: 5px;
-    height: 60%;
+    height: 330px;
     left: 200px;
     background-color: rgb(0, 0, 0);
     position: absolute;
-    bottom: 10%;
+    bottom: 70px;
 }
+
 .line-3 {
     height: 5px;
-    width: 20%;
+    width: 250px;
     left: 200px;
-    background-color: rgb(0, 0,  0);
+    background-color: rgb(0, 0, 0);
     position: absolute;
-    top: 35%;
+    top: 200px;
 }
+
 .line-4 {
     width: 5px;
-    height: 8%;
+    height: 47px;
     left: 320px;
     background-color: rgb(0, 0, 0);
     position: absolute;
-    top: 35%;
+    top: 200px;
 }
+
 .line-5 {
     width: 70px;
     height: 70px;
     left: 282px;
-    border-radius:50%;
+    border-radius: 50%;
     border: 5px dashed black;
     position: absolute;
     top: 235px;
 }
+
 .line-6 {
     width: 50px;
     height: 50px;
@@ -120,41 +126,42 @@ p{
     border-radius: 50%;
     border: 5px solid black;
     position: absolute;
-    top: 44%;
+    top: 243px;
 }
+
 .line-7 {
     width: 4px;
     height: 100px;
     left: 320px;
     background-color: rgb(0, 0, 0);
     position: absolute;
-    top: 54%;
-    
+    top: 300px;
+
 }
 
 .line-8 {
     width: 4px;
-    height: 15%;
+    height: 85px;
     left: 287px;
     background-color: rgb(0, 0, 0);
     position: absolute;
-    top: 53%;
-    transform:rotate(125deg) ;
+    top: 300px;
+    transform: rotate(125deg);
 }
 
 .line-9 {
     width: 4px;
-    height: 15%;
+    height: 85px;
     left: 353px;
     background-color: rgb(0, 0, 0);
     position: absolute;
-    top: 53%;
+    top: 300px;
     transform: rotate(-125deg);
 }
 
 .line-10 {
     width: 4px;
-    height: 15%;
+    height: 85px;
     left: 289px;
     background-color: rgb(0, 0, 0);
     position: absolute;
@@ -164,39 +171,41 @@ p{
 
 .line-11 {
     width: 4px;
-    height: 15%;
+    height: 85px;
     left: 350px;
     background-color: rgb(0, 0, 0);
     position: absolute;
     top: 382px;
     transform: rotate(-50deg);
-}   
-.result{
-        width: 300px;
-        height: fit-content;
-        left: 40%;
-        padding: 30px;
-        border-radius: 15px;
-        color:aliceblue;
-        background-color: rgb(197, 28, 206);
-        position: absolute;
-        top: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap:20px;
-        font-size: 30px;
+}
+
+.result {
+    width: 300px;
+    height: fit-content;
+    padding: 30px;
+    border-radius: 15px;
+    color: aliceblue;
+    background-color: rgb(197, 28, 206);
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
 }
 
 
-.retryBtn{
+.retryBtn {
     padding: 5px 10px;
     background-color: aliceblue;
     border: none;
     font-size: 20px;
     width: fit-content;
 }
+
 .hide {
     display: none;
 }

@@ -2,43 +2,43 @@
     "words": [
         {
             "category": "Movies",
-            "word": "Inception"
+            "word": "inception"
         },
         {
             "category": "Movies",
-            "word": "Titanic"
+            "word": "titanic"
         },
         {
             "category": "Programming",
-            "word": "JavaScript"
+            "word": "javascript"
         },
         {
             "category": "Programming",
-            "word": "Python"
+            "word": "python"
         },
         {
             "category": "Books",
-            "word": "HarryPotter"
+            "word": "harrypotter"
         },
         {
             "category": "Books",
-            "word": "LordOfTheRings"
+            "word": "lordoftherings"
         },
         {
             "category": "Food",
-            "word": "Pizza"
+            "word": "pizza"
         },
         {
             "category": "Food",
-            "word": "Sushi"
+            "word": "sushi"
         },
         {
             "category": "Countries",
-            "word": "Australia"
+            "word": "australia"
         },
         {
             "category": "Countries",
-            "word": "Canada"
+            "word": "canada"
         }
     ]
 }
