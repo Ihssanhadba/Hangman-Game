@@ -1,6 +1,6 @@
 let wordToGuess;
 fetchData();
-hideHang()
+hideHang();
 function fetchData() {
     fetch('data.json')
         .then(response => {
@@ -24,11 +24,6 @@ function fetchData() {
                 wordElement.textContent = element;
                 gameDiv.appendChild(wordElement);
             });
-            // for (let i = 0; i < wordToGuess.length; i++) {
-            //     let wordElement = document.createElement('p');
-            //     wordElement.textContent = wordToGuess[i];
-            //     gameDiv.appendChild(wordElement);
-            // }
         })
         .catch(error => {
             console.error('There has been a problem with your fetch operation:', error);
@@ -51,11 +46,9 @@ Array.from(buttons).forEach(button => {
             if (letter.textContent == letterClicked.toLowerCase()) {
                 correctAnswer();
             }
-
             else if (score == word.length) {
                 Winner();
             }
-
             function correctAnswer() {
                 word[i].style.color = "black";
                 score++;
@@ -63,7 +56,6 @@ Array.from(buttons).forEach(button => {
                 e.target.style.background = "green";
             };
         }
-
         if (!correct) {
             Chance++;
             e.target.style.background = "red";
@@ -77,8 +69,6 @@ Array.from(buttons).forEach(button => {
     }
     );
 })
-
-
 
 function Winner() {
     const elementToShow = document.querySelector(".result");
@@ -111,11 +101,8 @@ function retryGame() {
         button.classList.remove("hide");
         button.style.background = "blue";
         button.removeAttribute('disabled');
-        // button.attributes= enable;
-    })
+    });
     elementToShow.classList.add("hide");
-    buttons.classList.remove("hide");
-    buttons.style.background = "blue";
 }
 function hideHang() {
     const hangstandChildren = document.querySelector(".man").children;
@@ -124,7 +111,4 @@ function hideHang() {
         element.classList.add("hide");
     });
 }
-// for (let i = 0; i < hangstandChildren.length;i++){
-//     const child = hangstandChildren[i];
-//     child.classList.add("hide");
-// }
+    
